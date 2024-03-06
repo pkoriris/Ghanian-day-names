@@ -52,3 +52,23 @@ function checkRadiobutton() { //check what button is selected and return it
     }
     return gender;
 }
+function main(){ // compute for the Akan name and return it
+    let akanName = null;
+    let gender = getGender();
+    let dayOfTheweek = computeDayOfTheweek();
+
+    if(gender.toLocaleLowerCase().startsWith('m')){ // check if the gender is male
+        akanName=MALE_NAMES[dayOfTheweek];
+    } else{
+        akanName= FFEMALE_NAMES[dayOfTheweek];
+    }
+
+    // check if valid inputs were provided otherwise the computation will result to undefined
+    if (akanName==undefined){
+        akanName="Error: please use number within the ranges provided."
+    }
+    // Output the name of the user for the birthday given
+     document.getElementById("name_label").innerHTML = " " + akanName;
+    
+    
+}
