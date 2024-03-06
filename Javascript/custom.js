@@ -41,3 +41,14 @@ function computeDayOfTheweek(){
     return dayOfTheWeek;
     
 }
+function checkRadiobutton() { //check what button is selected and return it
+
+    let gender = null;
+    let ele = document.getElementsByName('gender');
+      
+    for(i = 0; i < ele.length; i++) {
+        if(ele[i].checked)
+        gender = ele[i].value;
+    }
+    return gender;
+}
