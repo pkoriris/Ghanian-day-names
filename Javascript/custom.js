@@ -41,6 +41,7 @@ function computeDayOfTheweek(){
     return dayOfTheWeek;
     
 }
+
 function checkRadiobutton() { //check what button is selected and return it
 
     let gender = null;
@@ -52,6 +53,7 @@ function checkRadiobutton() { //check what button is selected and return it
     }
     return gender;
 }
+
 function main(){ // compute for the Akan name and return it
     let akanName = null;
     let gender = getGender();
@@ -81,5 +83,34 @@ function getMonth(){
         document.getElementById("month").value="";
         alert (" Month must be between 1 - 12.");
      
+    }
+}
+
+//get and validate the year
+function getYear(){
+
+    let year = document.getElementById("year").value;
+    if(year.length != 4){
+        document.getElementById("year").value="";
+        alert("year must be 4 digits i.e 1989");
+    }else{
+
+    return year;
+    }
+}
+// get gender
+function getGender(){    
+    let gender = checkRadiobutton();
+     return gender;
+}
+//get and validate the day
+function getDay(){
+    let day = document.getElementById("day").value;
+    if(day > 0 && day<=31){
+    return day;
+    }else{
+        document.getElementById("day").value="";
+        alert (" Day must be between 1 - 31.");
+    
     }
 }
