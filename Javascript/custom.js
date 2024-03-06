@@ -72,3 +72,14 @@ function main(){ // compute for the Akan name and return it
     
     
 }
+//get and validate the month
+function getMonth(){
+    let month = document.getElementById("month").value;
+    if(month > 0  && month <=12){
+    return month;
+    }else{
+        document.getElementById("month").value="";
+        alert (" Month must be between 1 - 12.");
+     
+    }
+}
